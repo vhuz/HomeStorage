@@ -30,7 +30,7 @@ public class StorageDbHelper extends SQLiteOpenHelper {
     public static final String LOG_TAG = StorageDbHelper.class.getSimpleName();
 
     /** Name of the database file */
-    private static final String DATABASE_NAME = "shelter.db";
+    private static final String DATABASE_NAME = "home_storage.db";
 
     /**
      * Database version. If you change the database schema, you must increment the database version.
@@ -52,7 +52,7 @@ public class StorageDbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         // Create a String that contains the SQL statement to create the pets table
-        String SQL_CREATE_PETS_TABLE =  "CREATE TABLE " + StorageEntry.TABLE_NAME + " ("
+        String SQL_CREATE_STORAGE_TABLE =  "CREATE TABLE " + StorageEntry.TABLE_NAME + " ("
                 + StorageEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + StorageEntry.COLUMN_STORAGE_ROOM + " TEXT NOT NULL, "
                 + StorageEntry.COLUMN_STORAGE_BIN + " TEXT NOT NULL, "
@@ -61,7 +61,7 @@ public class StorageDbHelper extends SQLiteOpenHelper {
                 + StorageEntry.COLUMN_STORAGE_AVAILABILITY + " BOOLEAN NOT NULL DEFAULT 0);";
 
         // Execute the SQL statement
-        db.execSQL(SQL_CREATE_PETS_TABLE);
+        db.execSQL(SQL_CREATE_STORAGE_TABLE);
     }
 
     /**
