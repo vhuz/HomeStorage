@@ -58,7 +58,7 @@ public class StorageProvider extends ContentProvider {
         // The content URI of the form "content://com.example.android.pets/pets" will map to the
         // integer code {@link #PETS}. This URI is used to provide access to MULTIPLE rows
         // of the pets table.
-        sUriMatcher.addURI(StorageContract.CONTENT_AUTHORITY, StorageContract.PATH_PETS, PETS);
+        sUriMatcher.addURI(StorageContract.CONTENT_AUTHORITY, StorageContract.PATH_STORAGE_BINS, PETS);
 
         // The content URI of the form "content://com.example.android.pets/pets/#" will map to the
         // integer code {@link #PET_ID}. This URI is used to provide access to ONE single row
@@ -67,7 +67,7 @@ public class StorageProvider extends ContentProvider {
         // In this case, the "#" wildcard is used where "#" can be substituted for an integer.
         // For example, "content://com.example.android.pets/pets/3" matches, but
         // "content://com.example.android.pets/pets" (without a number at the end) doesn't match.
-        sUriMatcher.addURI(StorageContract.CONTENT_AUTHORITY, StorageContract.PATH_PETS + "/#", PET_ID);
+        sUriMatcher.addURI(StorageContract.CONTENT_AUTHORITY, StorageContract.PATH_STORAGE_BINS + "/#", PET_ID);
     }
 
     /** Database helper object */
